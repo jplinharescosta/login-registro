@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins&display=swap" rel="stylesheet">
+    <title>Acessa/Cadastrar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: rgb(48, 48, 48);
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        input {            
+            text-rendering: auto;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            -webkit-rlt-ordering: logical;
+        }
+        
+        div {
+            display: block;
+        }
+
+        form {
+            margin-top: 0em;
+            display: block;
+        }
+
+        .login {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+       
+        .box-usuario {
+            background-color: #fff;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+            min-width: 250px;
+            max-width: 600px;
+            padding-bottom: 40px;
+        }
+
+        .box-usuario form {
+            padding: 0px 0 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .box-titulo {
+            text-align: center;
+            font-size: 22px;
+            line-height: 24px;
+            font-weight: bold;
+            padding: 35px 50px 30px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .conteudo {
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .conteudo {
+                width: 100%;
+                padding: 5px 20px;
+            }            
+        }
+
+        .campo-registro {
+            text-align: right;
+            position: relative;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .campo-registro {
+                width: 100%;
+            }
+            
+        }
+
+        span.legenda {
+            font-size: 16px;
+            display: block;
+            margin: 0px 0 5px;
+            text-align: left;
+            max-width: 100%;
+            font-weight: bold;
+        }
+
+        .login .box-usuario .conteudo .campo-registro input {            
+            display: block;
+            max-width: 100%;            
+            border-radius: 4px;
+            border: 1px solid #dedede;
+            box-shadow: unset;
+            width: 100%;
+            height: 40px;
+            outline: none;
+            background-color: #fff;
+            transition: .2s;
+        }
+
+        .conteudo .botoes {
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            position: relative;
+            padding: 10px 10px;
+            font-size: 15px;            
+            line-height: 18px;
+            color: rgb(48, 48, 48);
+            margin: 10px 0 30px;
+        }
+
+        .conteudo .botoes input[type=submit] {
+            max-width: 341px;
+            border-radius: 3px;
+            text-decoration: unset;
+            font-family: unset;
+            font-size: 16px;
+            transition: .2;
+            width: 100%;
+            height: 40px;
+            margin-bottom: 23px;
+            padding-bottom: 3px;
+            margin-top: 12px;
+            color: #ffffff;
+            outline: none;
+            cursor: pointer;
+            background-color: #7ab13b;
+            border: 2px solid #7ab13b;
+            transition: 0.2s;
+            
+        }
+
+        .conteudo .botoes input[type=submit]:hover {
+            background-color: #8BC34A;
+            border-color: #8BC34A;
+        }
+
+        input[type="submit" i] {
+            appearance: none;
+            white-space: pre;
+            align-items: flex-start;
+        }
+
+        .conteudo a.esquecido {
+            color: #000;
+            font-weight: 400;
+            text-decoration: unset;
+            text-align: center;
+            font-size: 15px;
+            line-height: 18px;
+            padding: 10px 10px;
+        }
+
+        .conteudo a.esquecido:hover {
+            text-decoration: underline;
+        }
+
+        .conteudo .campo-registro span.legenda {
+            
+            font-size: 16px;
+            display: block;
+            text-align: left;
+            max-width: 100%;
+            padding-right: 5px;
+            padding-left: 0;            
+            font-weight: bold;
+            margin: 5px 10px;
+        }
+
+        .login .box-usuario .conteudo.nova-conta .campo-registro span.legenda {
+            text-align: center;            
+            font-size: 16px;
+            display: block;
+            max-width: 100%;
+            padding-right: 5px;
+            padding-left: 0;           
+            font-weight: bold;
+            margin: 14px 10px;
+        }
+
+        .btn-registro {
+            margin: auto;
+            text-transform: initial;
+            font-size: 16px;
+            width: 100%;
+            max-width: 341px;
+            display: block;
+            text-align: center;
+            border-radius: 3px;
+            text-decoration: unset;
+            font-weight: 400;
+            background-color: #303030;
+            border: 2px solid #303030;
+            color: #fff;
+            cursor: pointer;
+            padding: 11px 20px;
+            line-height: 15px;
+            user-select: none;
+            transition: .2s;
+        }
+
+        .btn-registro:hover {
+            background-color: black;
+            border: 2px solid black;
+        }
+
+        .login .campo-registro {
+            margin: 15px 0 15px;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="login">
+       <div class="box-usuario">
+           <form action="">
+               <div class="box-titulo">
+                   <span>Login</span>
+               </div>
+               <div class="conteudo">
+                    <div class="campo-registro">
+                        <span class="legenda required">E-mail</span>
+                        <input type="text" name="email" value>
+                    </div>
+                    <div class="campo-registro">
+                        <span class="legenda required">Senha</span>
+                        <input type="password" name="password" value>
+                    </div>
+                    <div class="botoes">
+                        <input type="submit" value="Entrar" class="btn-padrao botao">
+                        <a class="esquecido" href="#">Esqueceu sua senha?</a>
+                    </div>
+                </div>
+           </form>
+           <div class="conteudo nova-conta">
+               <div class="campo-registro">
+                    <span class="legenda">Não tem cadastro?</span>
+                    <a href="#" class="botao btn-registro btn-segundo">Cadastre-se</a>
+               </div>
+           </div>
+       </div>
+       <div class="float-break"></div>
+   </div>
+   <div class="float-break"></div>
+    
+</body>
+</html>
