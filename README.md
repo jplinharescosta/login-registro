@@ -1,1 +1,1 @@
-Formulario de cadastro/registro em HTML e CSS.
+Formulario de login/registro em HTML e CSS.
